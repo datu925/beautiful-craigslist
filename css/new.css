@@ -1,0 +1,33 @@
+/*@font-face {
+    font-family: Arista;
+    src: "../resources/fonts/arista/arista.ttf" format("truetype");
+}*/
+
+* {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.ban {
+  background-color: #0079f3;
+  color: white;
+}
+
+.ban * {
+  color: white;
+}
+
+.cats {
+  display: none;
+}
+
+.homepage .ban a:hover{background:none}
+
+.homepage #rightbar h5:hover{background:#0079f3}
+
+li.expand h5 {
+
+}
+
+.acitem {
+  display: none;
+}
