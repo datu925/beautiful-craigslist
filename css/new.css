@@ -10,6 +10,7 @@
 .ban {
   background-color: #0079f3;
   color: white;
+  cursor: pointer;
 }
 
 .ban * {
@@ -20,9 +21,13 @@
   display: none;
 }
 
-.homepage .ban a:hover{background:none}
+.homepage .ban a:hover {
+  background:none;
+}
 
-.homepage #rightbar h5:hover{background:#0079f3}
+.homepage #rightbar h5:hover {
+  background:#0079f3;
+}
 
 .acitem {
   display: none;
@@ -70,9 +75,6 @@
 
 #pagecontainer {
   z-index: 2;
-}
-
-#pagecontainer {
   padding-top: 0px !important;
   margin-top: 0px !important;
   width: 100% !important;
@@ -80,20 +82,18 @@
   flex-direction: column !important;
 }
 
-#rightbar, #center, #leftbar {
+.section {
   width: 100% !important;
   float: none !important;
   margin: 0 auto !important;
-  padding: 60px !important;
-}
-
-.section {
+  padding-top: 60px !important;
   box-sizing: border-box;
 }
 
-#video {
-  padding-top: 60px !important;
+#rightbar, #center, #leftbar {
+  padding: 60px !important;
 }
+
 
 #rightbar {
   min-height: 0px !important;
