@@ -1,7 +1,7 @@
 $(function() {
 
   // LOADER / SONG PICKER EVENTS
-  loadPage();
+  // loadPage();
 
   $("#song-choice").on("click", "button", function(event) {
     event.preventDefault();

@@ -88,6 +88,7 @@
   margin: 0 auto !important;
   padding-top: 60px !important;
   box-sizing: border-box;
+  min-height: 400px !important; /* change back to zero */
 }
 
 #rightbar, #center, #leftbar {
@@ -96,19 +97,10 @@
 
 
 #rightbar {
-  min-height: 0px !important;
   background-color: #90CCD4 !important;
   display: flex !important;
   flex-direction: row;
   justify-content: space-between;
-}
-
-#center {
-  height: none !important;
-}
-
-#leftbar {
-  min-height: 0px !important;
 }
 
 .other-content {
@@ -122,11 +114,6 @@
 
 #logo {
   display: inline !important;
-}
-
-
-.left-side {
-  vertical-align: middle;
 }
 
 .section-title {
@@ -186,15 +173,6 @@
   background-image: url("../resources/images/earth.png");
 }
 
-/*.hide * {
-  display: none;
-  -webkit-transition: all 4s ease;
-  -moz-transition: all 4s ease;
-  -o-transition: all 4s ease;
-  transition: all 4s ease;
-}
-*/
-
 audio {
   display: none;
 }
@@ -225,7 +203,7 @@ audio {
   z-index: 1002;
 }
 
-.buttons {
+.song-picker {
   display: flex;
   justify-content: space-around;
   margin: 25px;
@@ -371,18 +349,8 @@ audio {
 .loaded #loader {
     opacity: 0;
     visibility: hidden;
-/*    -webkit-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;*/
 }
 
 .loaded #loader-wrapper {
     display: none !important;
 }
-
-
-/*.loaded #loader-wrapper .loader-section.section-right,
-.loaded #loader-wrapper .loader-section.section-left {
-
-    -webkit-transition: all 0.3s 0.3s ease-out;
-            transition: all 0.3s 0.3s ease-out;
-}*/
