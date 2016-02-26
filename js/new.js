@@ -1,12 +1,14 @@
 $(function() {
 
-  $(".trigger-load").on("click", function(event) {
+  $("#song-choice").on("click", "button", function(event) {
     event.preventDefault();
+    if ($(this).text() === "I'm ready!") {
+      playIt($(this).closest("form").find("input").val());
+    } else {
+      setTimeout(loadPage, 500)
+      // loadPage();
+    }
 
-    playIt($(this).closest("form").find("input").val() ||
-      "Welcome to the jungle");
-    // $("body").addClass("loaded");
-    // document.getElementById('video-player').play();
   });
 
   $("h4.ban").on("click", function(event) {
@@ -18,7 +20,7 @@ $(function() {
       event.preventDefault();
       var destination = $(this).attr("href")
       $('html, body').animate({
-          scrollTop: $(destination).offset().top - 60
+          scrollTop: $(destination).offset().top - $("header").height()
       }, 1000);
   });
 
@@ -34,16 +36,25 @@ $(function() {
   }
 
   $("#song-choice").on("click",".song-listing", function(event) {
-    console.log("not yet prevented!")
     event.preventDefault();
-    console.log("prevented!")
-    var audio = new Audio();
-    var srcUrl = $(this).attr('href');
-    audio.src = srcUrl;
-    $("body").addClass("loaded");
-    document.getElementById('video-player').play();
+    var audio = document.getElementById("audio");//new Audio();
+    audio.src = $(this).attr('href');
+    loadPage();
     audio.play();
   })
+
+  // function loadPageWithMusic(srcUrl) {
+  //   var audio = document.getElementById("audio");//new Audio();
+  //   audio.src = $(this).attr('href');
+  //   loadPage();
+  //   audio.play();
+  // }
+
+  function loadPage() {
+    $("body").scrollTop(0)
+    $("body").addClass("loaded");
+    document.getElementById('video-player').play();
+  }
 
 
   function playIt(query) {
@@ -63,19 +74,8 @@ $(function() {
                 type: 'track'
             },
             success: function (response) {
-              // console.log(response);
               var songs = response.tracks.items;
-              console.log(songs);
-              $("#song-container").html(songs.map(generateSongHtml));
-
-
-              // normal play first find option
-              // if (response.tracks.items.length) {
-              //   var track = response.tracks.items[0];
-              //   audio.src = track.preview_url;
-              //   audio.play();
-              //   // communicateAction('<div>Playing ' + track.name + ' by ' + track.artists[0].name + '</div><img width="150" src="' + track.album.images[1].url + '">');
-              // }
+              $("#song-container").html($("<ul>").append(songs.map(generateSongHtml)));
             }
         });
     }

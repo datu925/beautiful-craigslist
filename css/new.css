@@ -225,9 +225,29 @@ audio {
   z-index: 1002;
 }
 
-#song-choice * {
-  margin: 25px auto;
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px;
+}
+
+#song-choice label {
+  margin: 25px;
+  text-align: center;
   display: block;
+}
+
+#song-choice input {
+  width: 200px;
+}
+
+#song-container li {
+  margin: 15px;
+  list-style-type: none;
+}
+
+#song-choice a {
+  color: white;
 }
 
 #loader {

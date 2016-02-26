@@ -29,8 +29,11 @@
         <div id="loader"></div>
         <form id="song-choice">
             <label>Would you like to enjoy some music with your craigslist?</label>
+            <div class="buttons">
             <input type="text" name="song-choice" placeholder="song name" autocomplete="off">
-            <button class="trigger-load">I'm ready!</button>
+                <button class="load-music">I'm ready!</button>
+                <button class="load-no-music">No thanks</button>
+            </div>
             <div id="song-container"></div>
         </form>
         <div class="loader-section section-left"></div>
@@ -757,10 +760,10 @@
 <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 </footer>
 </div>
-<!-- <audio controls autoplay>
+<audio id="audio" controls loop>
   <source display="none" src="../resources/songs/winter.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
-</audio> -->
+</audio>
 <script type="text/javascript">
     if (pagemode == 'mobile') {
         var s = document.getElementById('search');
