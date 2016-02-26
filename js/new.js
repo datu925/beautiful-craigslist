@@ -1,13 +1,19 @@
 $(function() {
+
+  $(".trigger-load").on("click", function(event) {
+    event.preventDefault();
+
+    playIt($(this).closest("form").find("input").val() ||
+      "Welcome to the jungle");
+    $("body").addClass("loaded");
+    document.getElementById('video-player').play();
+  });
+
   $("h4.ban").on("click", function(event) {
     event.preventDefault();
     $(this).parent().find(".cats").slideToggle();
   })
 
-  // $("h5.ban").on("click", function(event) {
-  //   event.preventDefault();
-  //   $(this).parent().find(".acitem").slideToggle();
-  // })
   $(".internal-nav").click(function(event) {
       event.preventDefault();
       var destination = $(this).attr("href")
@@ -32,7 +38,6 @@ $(function() {
     var audio = new Audio();
 
     function searchTracks(quer) {
-        console.log(quer);
         $.ajax({
             url: 'https://api.spotify.com/v1/search',
             data: {
@@ -40,13 +45,12 @@ $(function() {
                 type: 'track'
             },
             success: function (response) {
-              console.log(response.tracks);
+              // console.log(response);
               if (response.tracks.items.length) {
                 var track = response.tracks.items[0];
-                console.log(track);
                 audio.src = track.preview_url;
                 audio.play();
-                communicateAction('<div>Playing ' + track.name + ' by ' + track.artists[0].name + '</div><img width="150" src="' + track.album.images[1].url + '">');
+                // communicateAction('<div>Playing ' + track.name + ' by ' + track.artists[0].name + '</div><img width="150" src="' + track.album.images[1].url + '">');
               }
             }
         });
@@ -54,7 +58,5 @@ $(function() {
 
     searchTracks(query);
   }
-
-  playIt("welcome to the jungle");
 
 })
