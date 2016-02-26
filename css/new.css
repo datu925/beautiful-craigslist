@@ -115,6 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  height: 500px;
   margin-bottom: 70px;
 }
 
@@ -122,11 +123,6 @@
 #logo {
   display: inline !important;
 }
-
-.leftlinks a {
-  display: inline !important;
-}
-
 
 
 .left-side {
@@ -189,3 +185,12 @@
 #worldwide {
   background-image: url("../resources/images/earth.png");
 }
+
+/*.hide * {
+  display: none;
+  -webkit-transition: all 4s ease;
+  -moz-transition: all 4s ease;
+  -o-transition: all 4s ease;
+  transition: all 4s ease;
+}
+*/
