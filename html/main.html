@@ -1,4 +1,4 @@
-
+<!--  -->
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -8,9 +8,12 @@
 <meta name="google-site-verification" content="Ie0Do80edB2EurJYj-bxqMdX7zkMjx_FnjtQp_XMFio">
 <meta name="msvalidate.01" content="3402AB8563AB1E080501C21306FE7811"/>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=1">
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 <link type="text/css" rel="stylesheet" media="all" href="../css/cl.css">
 <link type="text/css" rel="stylesheet" media="all" href="../css/homepage.css">
 <link type="text/css" rel="stylesheet" media="all" href="../css/jquery-ui-clcustom.css">
+<link type="text/css" rel="stylesheet" media="all" href="../css/new.css">
+
 <!-- <link rel="prefetch" href="//www.craigslist.org/js/search-concat.min.js?v=0ce263bbe3112a61a03c27cdb4bf5411"> -->
 <!--[if lt IE 9]>
 <script src="//www.craigslist.org/js/html5shiv.min.js?v=096822b653643ed1af3136947e4ea79a" type="text/javascript" ></script>
@@ -57,120 +60,43 @@
     }());
 --></script>
 <div class="wrapper">
-<section id="pagecontainer">
 <div class="bglogo"></div>
 <header id="topban">
-<div class="mobile-menu-button mobile-only">menu</div>
-<h2 class="no-mobile">chicago<a class="wikilink" href="http://en.wikipedia.org/wiki/Chicago">w</a></h2>
-<h2 class="mobile-only mobile-logo">
-craigslist &gt; chicago
-</h2>
-<ul class="sublinks"><li><a href="/chc/" title="city of chicago">chc</a></li><li><a href="/nch/" title="north chicagoland">nch</a></li><li><a href="/wcl/" title="west chicagoland">wcl</a></li><li><a href="/sox/" title="south chicagoland">sox</a></li><li><a href="/nwi/" title="northwest indiana">nwi</a></li><li><a href="/nwc/" title="northwest suburbs">nwc</a></li></ul>
+    <div class="left-side">
+        <div id="logo">
+        <a href="//www.craigslist.org/about/sites">craigslist</a>
+        </div>
+        <h2 class="no-mobile">chicago
+            <a class="wikilink" href="http://en.wikipedia.org/wiki/Chicago">w</a>
+        </h2>
+        <ul class="sublinks">
+            <li><a href="/chc/" title="city of chicago">chc</a></li>
+            <li><a href="/nch/" title="north chicagoland">nch</a></li>
+            <li><a href="/wcl/" title="west chicagoland">wcl</a></li>
+            <li><a href="/sox/" title="south chicagoland">sox</a></li>
+            <li><a href="/nwi/" title="northwest indiana">nwi</a></li>
+            <li><a href="/nwc/" title="northwest suburbs">nwc</a></li>
+        </ul>
+    </div>
+    <ul class="sublinks right-side">
+        <li><a class="internal-nav" href="#video" title="header">top</a></li>
+        <li><a class="internal-nav" href="#center" title="city of chicago">stuff</a></li>
+        <li><a class="internal-nav" href="#rightbar" title="north chicagoland">events</a></li>
+        <li><a class="internal-nav" href="#leftbar" title="west chicagoland">other</a></li>
+    </ul>
 </header>
-<div id="leftbar">
-<div id="mobile-menu">
-<ul>
-<li id="mobile-languages" class="view-submenu">
-<p class="submenu-text">language</p>
-</li>
-<li id="mobile-subarea" class="view-submenu">
-<p class="submenu-text">subarea</p>
-<a href="#" class="right-arrow">&gt;</a>
-</li>
-<li id="mobile-area" class="view-submenu">
-<p class="submenu-text">area</p>
-<a href="#" class="right-arrow">&gt;</a>
-</li>
-<li id="mobile-post"><a id="post" href="https://post.craigslist.org/c/chi"><span>post to classifieds</span></a></li>
-<li id="mobile-account"><a href="https://accounts.craigslist.org/login/home">my account</a></li>
-</ul>
+<section id="pagecontainer">
+<div class="section" id="video">
+    <div class="fullscreen-bg">
+        <video loop muted autoplay class="fullscreen-bg__video">
+            <source src="../resources/videos/main-page.mp4" type="video/mp4">
+        </video>
+        <div id="overlay">The place where you buy stuff.</div>
+    </div>
 </div>
-<div id="logo">
-<a href="//www.craigslist.org/about/sites">craigslist</a>
-</div>
-<ul id="postlks">
-<li><a id="post" href="https://post.craigslist.org/c/chi">post to classifieds</a></li>
-<li><a href="https://accounts.craigslist.org/login/home">my account</a></li>
-</ul>
-<form id="search" action="/search/" method="GET">
-<div>search craigslist</div>
-<input type="hidden" name="sort" value="rel">
-<input id="query" name="query" data-autocomplete="search" autocorrect="off" autocapitalize="off" placeholder="search" autofocus="autofocus"><br>
-<select id="catAbb" name="catAbb">
-<option value="ccc">community</option>
-<option value="eee">events</option>
-<option value="ggg">gigs</option>
-<option value="hhh">housing</option>
-<option value="jjj">jobs</option>
-<option value="ppp">personals</option>
-<option value="res">resumes</option>
-<option value="sss" selected="selected">for sale</option>
-<option value="bbb">services</option>
-</select>
-<input id="go" type="submit" value="&gt;">
-</form>
-<h4 id="calban"><a href="/search/eee/">event calendar</a></h4>
-<table class="cal">
-<tr class="days">
-<th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th><th>S</th>
-</tr>
-<tr>
-<td>22</td>
-<td>23</td>
-<td>24</td>
-<td class="today"><a href="/search/eee?sale_date=2016-02-25">25</a></td>
-<td><a href="/search/eee?sale_date=2016-02-26">26</a></td>
-<td><a href="/search/eee?sale_date=2016-02-27">27</a></td>
-<td><a href="/search/eee?sale_date=2016-02-28">28</a></td>
-</tr>
-<tr>
-<td><a href="/search/eee?sale_date=2016-02-29">29</a></td>
-<td><a href="/search/eee?sale_date=2016-03-01">1</a></td>
-<td><a href="/search/eee?sale_date=2016-03-02">2</a></td>
-<td><a href="/search/eee?sale_date=2016-03-03">3</a></td>
-<td><a href="/search/eee?sale_date=2016-03-04">4</a></td>
-<td><a href="/search/eee?sale_date=2016-03-05">5</a></td>
-<td><a href="/search/eee?sale_date=2016-03-06">6</a></td>
-</tr>
-<tr>
-<td><a href="/search/eee?sale_date=2016-03-07">7</a></td>
-<td><a href="/search/eee?sale_date=2016-03-08">8</a></td>
-<td><a href="/search/eee?sale_date=2016-03-09">9</a></td>
-<td><a href="/search/eee?sale_date=2016-03-10">10</a></td>
-<td><a href="/search/eee?sale_date=2016-03-11">11</a></td>
-<td><a href="/search/eee?sale_date=2016-03-12">12</a></td>
-<td><a href="/search/eee?sale_date=2016-03-13">13</a></td>
-</tr>
-<tr>
-<td><a href="/search/eee?sale_date=2016-03-14">14</a></td>
-<td><a href="/search/eee?sale_date=2016-03-15">15</a></td>
-<td><a href="/search/eee?sale_date=2016-03-16">16</a></td>
-<td><a href="/search/eee?sale_date=2016-03-17">17</a></td>
-<td><a href="/search/eee?sale_date=2016-03-18">18</a></td>
-<td><a href="/search/eee?sale_date=2016-03-19">19</a></td>
-<td><a href="/search/eee?sale_date=2016-03-20">20</a></td>
-</tr>
-</table>
-<ul class="leftlinks" id="user_resources">
-<li><a href="//www.craigslist.org/about/help/">help, faq, abuse, legal</a></li>
-<li><a href="//www.craigslist.org/about/scams">avoid scams &amp; fraud</a></li>
-<li><a href="//www.craigslist.org/about/safety">personal safety tips</a></li>
-<li><a href="//www.craigslist.org/about/terms.of.use">terms of use</a></li>
-<li><a href="//www.craigslist.org/about/privacy.policy">privacy policy</a></li>
-<li><a href="//www.craigslist.org/about/help/system-status">system status</a></li>
-</ul>
-<ul class="leftlinks" id="about_craigslist">
-<li><a href="//www.craigslist.org/about/">about craigslist</a></li>
-<li><a href="//www.craigslist.org/about/craigslist_is_hiring">craigslist is hiring in sf</a></li>
-<li><a href="//www.craigslist.org/about/open_source">craigslist open source</a></li>
-<li><a href="http://blog.craigslist.org/">craigslist blog</a></li>
-<li><a href="//www.craigslist.org/about/best/all">best-of-craigslist</a></li>
-<li><a href="https://www.youtube.com/user/craigslist">craigslist TV</a></li>
-<li><a href="http://www.craigslistjoe.com/">"craigslist joe"</a></li>
-<li><a href="http://craigconnects.org/">craig connects</a></li>
-</ul>
-</div>
-<div id="center">
+<div class="section" id="center">
+    <h1 class="section-title">Stuff</h1>
+    <div class="categories-container">
 <div class="community">
 <div id="ccc" class="col">
 <h4 class="ban"><a href="/search/ccc" class="ccc" data-alltitle="all community" data-cat="ccc"><span class="txt">community<sup class="c"></sup></span></a></h4>
@@ -450,7 +376,9 @@ craigslist &gt; chicago
 </div>
 </div>
 </div>
-<div id="rightbar">
+</div>
+<div class="section" id="rightbar">
+<h1 class="section-title">Events</h1>
 <div id="langlinks">
 <select name="lang" id="chlang" class="js-only">
 <option value="?lang=af&setlang=1">afrikaans</option><option value="?lang=ca&setlang=1">català</option><option value="?lang=da&setlang=1">dansk</option><option value="?lang=de&setlang=1">deutsch</option><option selected value="?lang=en&cc=us&setlang=1">english</option><option value="?lang=es&cc=mx&setlang=1">español</option><option value="?lang=tl&setlang=1">filipino</option><option value="?lang=fr&setlang=1">français</option><option value="?lang=it&setlang=1">italiano</option><option value="?lang=nl&setlang=1">nederlands</option><option value="?lang=no&setlang=1">norsk</option><option value="?lang=pt&setlang=1">português</option><option value="?lang=fi&setlang=1">suomi</option><option value="?lang=sv&setlang=1">svenska</option><option value="?lang=tr&setlang=1">türkçe</option>
@@ -459,7 +387,7 @@ craigslist &gt; chicago
 <a href="?lang=af&setlang=1">afrikaans</a><br><a href="?lang=ca&setlang=1">català</a><br><a href="?lang=da&setlang=1">dansk</a><br><a href="?lang=de&setlang=1">deutsch</a><br><b>english</b><br><a href="?lang=es&cc=mx&setlang=1">español</a><br><a href="?lang=tl&setlang=1">filipino</a><br><a href="?lang=fr&setlang=1">français</a><br><a href="?lang=it&setlang=1">italiano</a><br><a href="?lang=nl&setlang=1">nederlands</a><br><a href="?lang=no&setlang=1">norsk</a><br><a href="?lang=pt&setlang=1">português</a><br><a href="?lang=fi&setlang=1">suomi</a><br><a href="?lang=sv&setlang=1">svenska</a><br><a href="?lang=tr&setlang=1">türkçe</a><br>
 </div>
 </div>
-<ul class="menu collapsible"><li class=" expand s"><h5 class="ban">nearby cl</h5><ul class="acitem">
+<ul class="menu collapsible"><li class=" expand s"><div class="event-icon" id="nearby"></div><h5 class="ban">nearby cl</h5><ul class="acitem">
 <li class="s"><a href="//appleton.craigslist.org/">appleton</a>
 <li class="s"><a href="//battlecreek.craigslist.org/">battle creek</a>
 <li class="s"><a href="//bn.craigslist.org/">bloomington</a>
@@ -491,7 +419,7 @@ craigslist &gt; chicago
 <li class="s"><a href="//terrehaute.craigslist.org/">terre haute</a>
 <li class="s"><a href="//tippecanoe.craigslist.org/">tippecanoe</a>
 </ul>
-</li><li class=" s"><h5 class="ban">us cities</h5><ul class="acitem">
+</li><li class=" s"><div class="event-icon" id="city"></div><h5 class="ban">us cities</h5><ul class="acitem">
 <li class="s"><a href="http://atlanta.craigslist.org/">atlanta</a>
 <li><a href="http://austin.craigslist.org/">austin</a>
 <li class="s"><a href="http://boston.craigslist.org/">boston</a>
@@ -517,7 +445,7 @@ craigslist &gt; chicago
 <li><a href="http://washingtondc.craigslist.org/">wash dc</a>
 <li class="s more"><a href="//geo.craigslist.org/iso/us">more ...</a></li>
 </ul>
-</li><li class=""><h5 class="ban">us states</h5><ul class="acitem">
+</li><li class=""><div class="event-icon" id="state"></div><h5 class="ban">us states</h5><ul class="acitem">
 <li><a href="//geo.craigslist.org/iso/us/al">alabama</a>
 <li><a href="//geo.craigslist.org/iso/us/ak">alaska</a>
 <li><a href="//geo.craigslist.org/iso/us/az">arizona</a>
@@ -573,7 +501,7 @@ craigslist &gt; chicago
 <li class="s"><a href="//geo.craigslist.org/iso/us/wy">wyoming</a>
 <li class="s more"><a href="//geo.craigslist.org/iso/us">more ...</a></li>
 </ul>
-</li><li class=" s"><h5 class="ban">canada</h5><ul class="acitem">
+</li><li class=" s"><div class="event-icon" id="canada"></div><h5 class="ban">canada</h5><ul class="acitem">
 <li><a href="http://calgary.craigslist.ca">calgary</a>
 <li><a href="http://edmonton.craigslist.ca">edmonton</a>
 <li><a href="http://halifax.craigslist.ca">halifax</a>
@@ -586,7 +514,7 @@ craigslist &gt; chicago
 <li><a href="http://winnipeg.craigslist.ca">winnipeg</a>
 <li class="s more"><a href="//geo.craigslist.org/iso/ca">more ...</a></li>
 </ul>
-</li><li><h5 class="ban">cl worldwide</h5><ul class="acitem collapsible">
+</li><li><div class="event-icon" id="worldwide"></div><h5 class="ban">cl worldwide</h5><ul class="acitem collapsible">
 <li class="cont s">
 <h5>africa</h5>
 <ul class="acitem">
@@ -709,6 +637,96 @@ craigslist &gt; chicago
 <a href="//www.craigslist.org/about/sites"><em>more...</em></a>
 </p>
 </div>
+<div class="section" id="leftbar">
+    <h1 class="section-title">Other</h1>
+    <div class="other-content hide">
+        <div class="misc">
+<ul id="postlks">
+<li><a id="post" href="https://post.craigslist.org/c/chi">post to classifieds</a></li>
+<li><a href="https://accounts.craigslist.org/login/home">my account</a></li>
+</ul>
+<form id="search" action="/search/" method="GET">
+<div>search craigslist</div>
+<input type="hidden" name="sort" value="rel">
+<input id="query" name="query" data-autocomplete="search" autocorrect="off" autocapitalize="off" placeholder="search" ><br>
+<select id="catAbb" name="catAbb">
+<option value="ccc">community</option>
+<option value="eee">events</option>
+<option value="ggg">gigs</option>
+<option value="hhh">housing</option>
+<option value="jjj">jobs</option>
+<option value="ppp">personals</option>
+<option value="res">resumes</option>
+<option value="sss" selected="selected">for sale</option>
+<option value="bbb">services</option>
+</select>
+<input id="go" type="submit" value="&gt;">
+</form>
+<h4 id="calban"><a href="/search/eee/">event calendar</a></h4>
+<table class="cal">
+<tr class="days">
+<th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th><th>S</th>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td class="today"><a href="/search/eee?sale_date=2016-02-25">25</a></td>
+<td><a href="/search/eee?sale_date=2016-02-26">26</a></td>
+<td><a href="/search/eee?sale_date=2016-02-27">27</a></td>
+<td><a href="/search/eee?sale_date=2016-02-28">28</a></td>
+</tr>
+<tr>
+<td><a href="/search/eee?sale_date=2016-02-29">29</a></td>
+<td><a href="/search/eee?sale_date=2016-03-01">1</a></td>
+<td><a href="/search/eee?sale_date=2016-03-02">2</a></td>
+<td><a href="/search/eee?sale_date=2016-03-03">3</a></td>
+<td><a href="/search/eee?sale_date=2016-03-04">4</a></td>
+<td><a href="/search/eee?sale_date=2016-03-05">5</a></td>
+<td><a href="/search/eee?sale_date=2016-03-06">6</a></td>
+</tr>
+<tr>
+<td><a href="/search/eee?sale_date=2016-03-07">7</a></td>
+<td><a href="/search/eee?sale_date=2016-03-08">8</a></td>
+<td><a href="/search/eee?sale_date=2016-03-09">9</a></td>
+<td><a href="/search/eee?sale_date=2016-03-10">10</a></td>
+<td><a href="/search/eee?sale_date=2016-03-11">11</a></td>
+<td><a href="/search/eee?sale_date=2016-03-12">12</a></td>
+<td><a href="/search/eee?sale_date=2016-03-13">13</a></td>
+</tr>
+<tr>
+<td><a href="/search/eee?sale_date=2016-03-14">14</a></td>
+<td><a href="/search/eee?sale_date=2016-03-15">15</a></td>
+<td><a href="/search/eee?sale_date=2016-03-16">16</a></td>
+<td><a href="/search/eee?sale_date=2016-03-17">17</a></td>
+<td><a href="/search/eee?sale_date=2016-03-18">18</a></td>
+<td><a href="/search/eee?sale_date=2016-03-19">19</a></td>
+<td><a href="/search/eee?sale_date=2016-03-20">20</a></td>
+</tr>
+</table>
+</div>
+<div class="helplinks">
+<ul class="leftlinks" id="user_resources">
+<li><a href="//www.craigslist.org/about/help/">help, faq, abuse, legal</a></li>
+<li><a href="//www.craigslist.org/about/scams">avoid scams &amp; fraud</a></li>
+<li><a href="//www.craigslist.org/about/safety">personal safety tips</a></li>
+<li><a href="//www.craigslist.org/about/terms.of.use">terms of use</a></li>
+<li><a href="//www.craigslist.org/about/privacy.policy">privacy policy</a></li>
+<li><a href="//www.craigslist.org/about/help/system-status">system status</a></li>
+</ul>
+<ul class="leftlinks" id="about_craigslist">
+<li><a href="//www.craigslist.org/about/">about craigslist</a></li>
+<li><a href="//www.craigslist.org/about/craigslist_is_hiring">craigslist is hiring in sf</a></li>
+<li><a href="//www.craigslist.org/about/open_source">craigslist open source</a></li>
+<li><a href="http://blog.craigslist.org/">craigslist blog</a></li>
+<li><a href="//www.craigslist.org/about/best/all">best-of-craigslist</a></li>
+<li><a href="https://www.youtube.com/user/craigslist">craigslist TV</a></li>
+<li><a href="http://www.craigslistjoe.com/">"craigslist joe"</a></li>
+<li><a href="http://craigconnects.org/">craig connects</a></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <footer>
 <ul class="clfooter">
@@ -723,8 +741,13 @@ craigslist &gt; chicago
 <li class="fsel desktop linklike" data-mode="mobile">mobile</li>
 <li class="fsel mobile linklike" data-mode="regular">desktop</li>
 </ul>
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 </footer>
 </div>
+<!-- <audio controls autoplay>
+  <source display="none" src="../resources/songs/winter.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio> -->
 <script type="text/javascript">
     if (pagemode == 'mobile') {
         var s = document.getElementById('search');
@@ -744,5 +767,7 @@ var noResults = "no results found for";
 --></script>
 <script src="../js/general-concat.min.js" type="text/javascript"></script>
 <script src="../js/homepage-concat.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
+<script src="../js/new.js"></script>
 </body>
 </html>

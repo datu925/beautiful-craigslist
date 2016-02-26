@@ -1,0 +1,200 @@
+/*@font-face {
+    font-family: Arista;
+    src: "../resources/fonts/arista/arista.ttf" format("truetype");
+}*/
+
+* {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.ban {
+  background-color: #0079f3;
+  color: white;
+}
+
+.ban * {
+  color: white;
+}
+
+.cats {
+  display: none;
+}
+
+.homepage .ban a:hover{background:none}
+
+.homepage #rightbar h5:hover{background:#0079f3}
+
+.acitem {
+  display: none;
+}
+
+.fullscreen-bg {
+    position: relative;
+    width: 100% !important;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    width: 100%;
+    height: 80%;
+}
+
+#overlay {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  left: 55%;
+  top: 25%;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 350%;
+  color: white;
+}
+
+#topban {
+  position: fixed !important;
+  width: 100% !important;
+  margin-right: 0px !important;
+  text-align: left;
+  z-index: 500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+.wrapper {
+  z-index: 1;
+}
+
+#pagecontainer {
+  z-index: 2;
+}
+
+#pagecontainer {
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#rightbar, #center, #leftbar {
+  width: 100% !important;
+  float: none !important;
+  margin: 0 auto !important;
+  padding: 60px !important;
+}
+
+.section {
+  box-sizing: border-box;
+}
+
+#video {
+  padding-top: 60px !important;
+}
+
+#rightbar {
+  min-height: 0px !important;
+  background-color: #90CCD4 !important;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#center {
+  height: none !important;
+}
+
+#leftbar {
+  min-height: 0px !important;
+}
+
+.other-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  margin-bottom: 70px;
+}
+
+
+#logo {
+  display: inline !important;
+}
+
+
+.left-side {
+  vertical-align: middle;
+}
+
+.section-title {
+  text-align: left !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
+  margin-bottom: 5px !important;
+}
+
+.categories-container {
+  margin: 0 10% 0 20% !important;
+  width: 70% !important;
+}
+
+.categories-container > div {
+  width: 30% !important;
+}
+
+#langlinks {
+  display: none !important;
+}
+
+.menu {
+  margin-top: 5px !important;
+  width: 30% !important;
+}
+
+.menu li {
+  margin: 10px 50px;
+}
+
+.event-icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto !important;
+  height: 70px;
+  width: 70px;
+}
+
+#nearby {
+  background-image: url("../resources/images/location-pin.png");
+}
+
+#city {
+  background-image: url("../resources/images/skyscrapers.png");
+}
+
+#state {
+  background-image: url("../resources/images/independence-day.png");
+}
+
+#canada {
+  background-image: url("../resources/images/heart-flag-of-canada.png");
+}
+
+#worldwide {
+  background-image: url("../resources/images/earth.png");
+}
+
+/*.hide * {
+  display: none;
+  -webkit-transition: all 4s ease;
+  -moz-transition: all 4s ease;
+  -o-transition: all 4s ease;
+  transition: all 4s ease;
+}
+*/
+
+audio {
+  display: none;
+}
