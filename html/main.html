@@ -14,16 +14,23 @@
 <link type="text/css" rel="stylesheet" media="all" href="../css/jquery-ui-clcustom.css">
 <link type="text/css" rel="stylesheet" media="all" href="../css/new.css">
 
-<!-- <link rel="prefetch" href="//www.craigslist.org/js/search-concat.min.js?v=0ce263bbe3112a61a03c27cdb4bf5411"> -->
-<!--[if lt IE 9]>
-<script src="//www.craigslist.org/js/html5shiv.min.js?v=096822b653643ed1af3136947e4ea79a" type="text/javascript" ></script>
-<script src="//www.craigslist.org/js/respond-fork.min.js?v=d7e1cb0d97ee0c0c9d84a7d4f1d03469" type="text/javascript" ></script>
-<![endif]-->
-<!--[if lte IE 7]>
-<script src="//www.craigslist.org/js/json2.min.js?v=178d4ad319e0e0b4a451b15e49b71bec" type="text/javascript" ></script>
-<![endif]-->
 </head>
 <body class="homepage">
+    <div id="loader-wrapper">
+        <h1 class="white-text blink">Loading horses...</h1>
+        <div id="loader"></div>
+        <form id="song-choice">
+            <label>Would you like to enjoy some music with your craigslist?</label>
+            <div class="song-picker">
+            <input type="text" name="song-choice" placeholder="song name" autocomplete="off">
+                <button class="load-music">Search</button>
+                <button class="load-no-music">No thanks</button>
+            </div>
+            <div id="song-container"></div>
+        </form>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
 <script type="text/javascript"><!--
     function C(k){return(document.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2]}
     var pagetype, pagemode;
@@ -59,6 +66,7 @@
         b.className = bodyClassList.join(' ');
     }());
 --></script>
+
 <div class="wrapper">
 <div class="bglogo"></div>
 <header id="topban">
@@ -88,7 +96,7 @@
 <section id="pagecontainer">
 <div class="section" id="video">
     <div class="fullscreen-bg">
-        <video loop muted autoplay class="fullscreen-bg__video">
+        <video loop muted id="video-player" class="fullscreen-bg__video">
             <source src="../resources/videos/main-page.mp4" type="video/mp4">
         </video>
         <div id="overlay">The place where you buy stuff.</div>
@@ -744,10 +752,10 @@
 <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 </footer>
 </div>
-<!-- <audio controls autoplay>
+<audio id="audio" controls loop>
   <source display="none" src="../resources/songs/winter.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
-</audio> -->
+</audio>
 <script type="text/javascript">
     if (pagemode == 'mobile') {
         var s = document.getElementById('search');

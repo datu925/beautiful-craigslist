@@ -1,38 +1,38 @@
 $(function() {
-  $("h4.ban").on("click", function(event) {
-    event.preventDefault();
-    $(this).parent().find(".cats").slideToggle();
-  })
 
-  // $("h5.ban").on("click", function(event) {
-  //   event.preventDefault();
-  //   $(this).parent().find(".acitem").slideToggle();
-  // })
-  $(".internal-nav").click(function(event) {
-      event.preventDefault();
-      var destination = $(this).attr("href")
-      $('html, body').animate({
-          scrollTop: $(destination).offset().top - 60
-      }, 1000);
+  // LOADER / SONG PICKER EVENTS
+  // loadPage();
+
+  $("#song-choice").on("click", "button", function(event) {
+    event.preventDefault();
+    if ($(this).hasClass("load-music")) {
+      listSongs($(this).closest("form").find("input").val());
+    } else {
+      $(".song-listing").slideToggle();
+      setTimeout(loadPage, 1000)
+    }
+
   });
 
-  window.onscroll = function() { toggleOther()};
+  $("#song-choice").on("click",".song-listing", function(event) {
+    event.preventDefault();
+    $(".song-listing").slideToggle();
+    setTimeout(loadPageWithMusic, 1000, $(this).attr('href'));
+  })
 
-  function toggleOther() {
-    var content = $(".other-content *")
-      if ($("body").scrollTop() > content.offset().top + content.height() - window.innerHeight) {
-          $(".other-content *").css('visibility', 'visible');
-      } else {
-          $(".other-content *").css('visibility', 'hidden');
-      }
-  }
+  function listSongs(query) {
 
+    function generateSongHtml(song) {
+      var $listing = $("<li>");
+      var $anchor = $("<a class='song-listing' href=" + song.preview_url + ">" + song.artists[0].name + ": " + song.name + "</a>");
+      return $listing.append($anchor);
+    }
 
-  function playIt(query) {
-    var audio = new Audio();
+    function generateSongsHtml(songs) {
+      return $("<ul>").append(songs.map(generateSongHtml));
+    }
 
     function searchTracks(quer) {
-        console.log(quer);
         $.ajax({
             url: 'https://api.spotify.com/v1/search',
             data: {
@@ -40,14 +40,8 @@ $(function() {
                 type: 'track'
             },
             success: function (response) {
-              console.log(response.tracks);
-              if (response.tracks.items.length) {
-                var track = response.tracks.items[0];
-                console.log(track);
-                audio.src = track.preview_url;
-                audio.play();
-                communicateAction('<div>Playing ' + track.name + ' by ' + track.artists[0].name + '</div><img width="150" src="' + track.album.images[1].url + '">');
-              }
+              var songs = response.tracks.items;
+              $("#song-container").html(generateSongsHtml(songs));
             }
         });
     }
@@ -55,6 +49,44 @@ $(function() {
     searchTracks(query);
   }
 
-  playIt("welcome to the jungle");
+  // PAGE LOAD
+
+  function loadPageWithMusic(srcUrl) {
+    var audio = document.getElementById("audio");//new Audio();
+    audio.src = srcUrl;
+    loadPage();
+    audio.play();
+  }
+
+  function loadPage() {
+    $("body").scrollTop(0)
+    $("body").addClass("loaded");
+    document.getElementById('video-player').play();
+  }
+
+
+  // MAINPAGE EVENTS
+
+  $(".internal-nav").click(function(event) {
+    event.preventDefault();
+    var destination = $(this).attr("href")
+    $('html, body').animate({
+        scrollTop: $(destination).offset().top - $("header").height()
+    }, 1000);
+  });
+
+  $("h4.ban").on("click", function(event) {
+    event.preventDefault();
+    $(this).parent().find(".cats").slideToggle();
+  })
+
+  window.onscroll = function toggleOther() {
+    var content = $(".other-content *")
+    if ($("body").scrollTop() > content.offset().top + content.height() - window.innerHeight) {
+        content.css('visibility', 'visible');
+    } else {
+        content.css('visibility', 'hidden');
+    }
+  }
 
 })
