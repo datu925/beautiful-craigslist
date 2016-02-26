@@ -2,11 +2,11 @@ $(function() {
 
   $("#song-choice").on("click", "button", function(event) {
     event.preventDefault();
-    if ($(this).text() === "I'm ready!") {
+    if ($(this).hasClass("load-music")) {
       playIt($(this).closest("form").find("input").val());
     } else {
+      $(".song-listing").slideToggle();
       setTimeout(loadPage, 500)
-      // loadPage();
     }
 
   });
@@ -37,18 +37,20 @@ $(function() {
 
   $("#song-choice").on("click",".song-listing", function(event) {
     event.preventDefault();
-    var audio = document.getElementById("audio");//new Audio();
-    audio.src = $(this).attr('href');
-    loadPage();
-    audio.play();
+    $(".song-listing").slideToggle();
+    setTimeout(loadPageWithMusic, 1000, $(this).attr('href'));
+    // var audio = document.getElementById("audio");//new Audio();
+    // audio.src = $(this).attr('href');
+    // loadPage();
+    // audio.play();
   })
 
-  // function loadPageWithMusic(srcUrl) {
-  //   var audio = document.getElementById("audio");//new Audio();
-  //   audio.src = $(this).attr('href');
-  //   loadPage();
-  //   audio.play();
-  // }
+  function loadPageWithMusic(srcUrl) {
+    var audio = document.getElementById("audio");//new Audio();
+    audio.src = srcUrl;
+    loadPage();
+    audio.play();
+  }
 
   function loadPage() {
     $("body").scrollTop(0)
