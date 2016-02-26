@@ -194,3 +194,7 @@
   transition: all 4s ease;
 }
 */
+
+audio {
+  display: none;
+}

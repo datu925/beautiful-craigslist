@@ -16,36 +16,45 @@ $(function() {
       }, 1000);
   });
 
-  window.onscroll = function() {myFunction()};
+  window.onscroll = function() { toggleOther()};
 
-  function myFunction() {
+  function toggleOther() {
     var content = $(".other-content *")
       if ($("body").scrollTop() > content.offset().top + content.height() - window.innerHeight) {
-          $(".other-content *").css('visibility', 'visible'); // removeClass('hide');
+          $(".other-content *").css('visibility', 'visible');
       } else {
-          $(".other-content *").css('visibility', 'hidden'); // addClass('hide');
+          $(".other-content *").css('visibility', 'hidden');
       }
   }
 
 
-  var audio = new Audio();
+  function playIt(query) {
+    var audio = new Audio();
 
-  function searchTracks("Back in Black artist: ACDC") {
-      $.ajax({
-          url: 'https://api.spotify.com/v1/search',
-          data: {
-              q: query,
-              type: 'track'
-          },
-          success: function (response) {
+    function searchTracks(quer) {
+        console.log(quer);
+        $.ajax({
+            url: 'https://api.spotify.com/v1/search',
+            data: {
+                q: quer,
+                type: 'track'
+            },
+            success: function (response) {
+              console.log(response.tracks);
               if (response.tracks.items.length) {
-                  var track = response.tracks.items[0];
-                  audio.src = track.preview_url;
-                  audio.play();
-                  communicateAction('<div>Playing ' + track.name + ' by ' + track.artists[0].name + '</div><img width="150" src="' + track.album.images[1].url + '">');
+                var track = response.tracks.items[0];
+                console.log(track);
+                audio.src = track.preview_url;
+                audio.play();
+                communicateAction('<div>Playing ' + track.name + ' by ' + track.artists[0].name + '</div><img width="150" src="' + track.album.images[1].url + '">');
               }
-          }
-      });
+            }
+        });
+    }
+
+    searchTracks(query);
   }
+
+  playIt("welcome to the jungle");
 
 })
